@@ -20,3 +20,16 @@ Composer est un gestionnaire de dépendances pour PHP. Si vous ne l'avez pas enc
    ```url
    https://getcomposer.org/download/
    ```
+
+### Création d'un projet symfony :
+```symfony
+symfony new NomProjet --webapp
+```
+Le `--webapp` permet d'installer toute les dépendances requise dans un projet web.
+
+Une fois la commande executer, le CMD vous demandera si on veux inclure une configuration docker. A vous de voir ;)
+
+### Pour changer la version de php dans votre projet symfony :
+```symfony
+echo 8.*.* > .php-version
+```
