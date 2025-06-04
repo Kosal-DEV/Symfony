@@ -1,6 +1,6 @@
-# 🎯 Symfony
+<h1 align="center">🎯 Symfony</h1>
 
-Symfony est un framework PHP open-source très populaire pour le développement d'applications web. Il propose une série d'outils et de bibliothèques réutilisables pour créer des applications robustes et évolutives.
+<h2 align="center">Symfony est un framework PHP open-source très populaire pour le développement d'applications web. Il propose une série d'outils et de bibliothèques réutilisables pour créer des applications robustes et évolutives.</h2>
 
 ---
 
@@ -31,13 +31,13 @@ symfony server:ca:install
 ### 🚀 Création d’un projet Symfony
 
 Créez un nouveau projet Symfony avec le pack web complet :
-```symfony
+```bash
 symfony new NomProjet --webapp
 ```
 ---
 ### 🔧 Pour changer la version de php dans votre projet symfony
 Dans le dossier du projet Symfony :
-```symfony
+```bash
 echo 8.*.* > .php-version
 ```
 ---
@@ -48,3 +48,9 @@ Liste les serveurs Symfony actuellement lancés :
 symfony server:list
 ```
 ---
+### 🟢 Démarrage du serveur symfony
+
+Commande pour lancer le serveur :
+```bash
+symfony server:start -d
+```
