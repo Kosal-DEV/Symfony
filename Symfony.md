@@ -23,7 +23,7 @@ Si Composer n'est pas installé :
 ---
 ### 🔒 Certificat HTTPS
 
-Pour générer un certificat local HTTPS :
+Pour générer un certificat local <strong>HTTPS</strong> :
 ```bash
 symfony server:ca:install
 ```
