@@ -1,35 +1,50 @@
-# Symfony
+# 🎯 Symfony
 
-Symfony est un framework PHP open-source très populaire pour le développement d'applications web. Symfony offre une série d'outils et de bibliothèques réutilisables qui permettent de créer des applications web robustes et évolutives. Il est très utilisé par les développeurs PHP, surtout pour des projets complexes ou de grande envergure.
+Symfony est un framework PHP open-source très populaire pour le développement d'applications web. Il propose une série d'outils et de bibliothèques réutilisables pour créer des applications robustes et évolutives.
 
-## Prérequis :
+---
 
-Avant de commencer l'installation de Symfony, assurez-vous que vous avez les éléments suivants installés sur votre machine :
+### ✅ Prérequis
 
-- **PHP** (version 8.1 ou supérieure recommandée)
-- **Composer** (outil de gestion des dépendances PHP)
-- **Base de données** (comme MySQL ou PostgreSQL si vous prévoyez de l'utiliser)
+Avant d'installer Symfony, assurez-vous que votre machine dispose de :
 
-## Étapes d'installation
+- **PHP** (>= 8.1 recommandé)
+- **Composer** (gestionnaire de dépendances PHP)
+- **Base de données** (MySQL, PostgreSQL, etc. selon vos besoins)
 
-### 1. Installer Composer
-Composer est un gestionnaire de dépendances pour PHP. Si vous ne l'avez pas encore installé, suivez ces étapes :
+---
 
-#### Installer Composer globalement
-1. Télécharger le programme d'installation de Composer : 
-   ```url
-   https://getcomposer.org/download/
-   ```
+### 🛠️ Installation de Composer
 
-### Création d'un projet symfony :
+Si Composer n'est pas installé :
+
+👉 Télécharger depuis [getcomposer.org](https://getcomposer.org/download/)
+
+---
+### 🔒 Certificat HTTPS
+
+Pour générer un certificat local HTTPS :
+```bash
+symfony server:ca:install
+```
+---
+### 🚀 Création d’un projet Symfony
+
+Créez un nouveau projet Symfony avec le pack web complet :
 ```symfony
 symfony new NomProjet --webapp
 ```
-Le `--webapp` permet d'installer toute les dépendances requise dans un projet web.
-
-Une fois la commande executer, le CMD vous demandera si on veux inclure une configuration docker. A vous de voir ;)
-
-### Pour changer la version de php dans votre projet symfony :
+---
+### 🔧 Pour changer la version de php dans votre projet symfony
+Dans le dossier du projet Symfony :
 ```symfony
 echo 8.*.* > .php-version
 ```
+---
+### 🧪 Vérifier les serveurs Symfony actifs
+
+Liste les serveurs Symfony actuellement lancés :
+```bash
+symfony server:list
+```
+---
