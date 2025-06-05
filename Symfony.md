@@ -64,3 +64,6 @@ Commande pour lancer le serveur :
 ```bash
 symfony server:start -d
 ```
+
+
+![image test]("C:\Users\CFITECH\Desktop\CFITECH\symfony\Capture d'écran 2025-06-06 000654.png")
