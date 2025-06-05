@@ -11,14 +11,23 @@ Avant d'installer Symfony, assurez-vous que votre machine dispose de :
 - **PHP** (>= 8.1 recommandé)
 - **Composer** (gestionnaire de dépendances PHP)
 - **Base de données** (MySQL, PostgreSQL, etc. selon vos besoins)
+- **symfony CLI**
 
 ---
 
-### 🛠️ Installation de Composer
+### 🛠️ Installation
+
+Si PHP n'est pas installé :
+
+👉 Télécharger depuis [wampserver.com](https://www.wampserver.com/)
 
 Si Composer n'est pas installé :
 
 👉 Télécharger depuis [getcomposer.org](https://getcomposer.org/download/)
+
+Si symfony CLI n'est pas installé :
+
+👉 Télécharger depuis [symfony.com](https://symfony.com/download)
 
 ---
 ### 🔒 Certificat HTTPS
@@ -27,6 +36,7 @@ Pour générer un certificat local <strong>HTTPS</strong> :
 ```bash
 symfony server:ca:install
 ```
+⚠️Le certificat à besoin d'être installer une seule fois par machine !
 ---
 ### 🚀 Création d’un projet Symfony
 
