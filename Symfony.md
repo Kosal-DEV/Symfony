@@ -66,4 +66,4 @@ symfony server:start -d
 ```
 
 
-![image test]("C:\Users\CFITECH\Desktop\CFITECH\symfony\Capture d'écran 2025-06-06 000654.png")
+![image test](symfony/https://github.com/Kosal-DEV/Symfony/blob/main/symfony/Capture_20d'_C3_A9cran_202025-06-06_20000654.png)
