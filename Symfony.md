@@ -36,7 +36,8 @@ Pour générer un certificat local <strong>HTTPS</strong> :
 ```bash
 symfony server:ca:install
 ```
-⚠️Le certificat à besoin d'être installer une seule fois par machine !
+⚠️ *Le certificat à besoin d'être installer une seule fois par machine !*
+
 ---
 ### 🚀 Création d’un projet Symfony
 
@@ -66,4 +67,5 @@ symfony server:start -d
 ```
 
 
-![image test](symfony/https://github.com/Kosal-DEV/Symfony/blob/main/symfony/Capture_20d'_C3_A9cran_202025-06-06_20000654.png)
+![Description de l'image](https://github.com/Kosal-DEV/Symfony/blob/main/symfony/Capture%20d'%C3%A9cran%202025-06-06%20000654.png?raw=true)
+
