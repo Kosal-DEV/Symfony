@@ -61,11 +61,21 @@ symfony server:list
 ---
 ### 🟢 Démarrage du serveur symfony
 
-Commande pour lancer le serveur :
+Commande pour lancer le serveur symfony local :
 ```bash
 symfony server:start -d
 ```
+---
+### 🌐 Ouvrir la page web 
 
+Commande pour ouvrir votre site via l'invite de commande :
+```bash
+symfony open:local
+```
+---
+### 🔴 Arrêter le serveur symfony local
 
-![Description de l'image](https://github.com/Kosal-DEV/Symfony/blob/main/symfony/Capture%20d'%C3%A9cran%202025-06-06%20000654.png?raw=true)
-
+Cette commande permet d'arrêter votre serveur symfony. Faites CTRL + C dans votre terminal si la commande ne fonctionne pas :
+```bash
+symfony server:stop
+```
