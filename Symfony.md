@@ -79,3 +79,13 @@ Cette commande permet d'arrêter votre serveur symfony. Faites CTRL + C dans vot
 ```bash
 symfony server:stop
 ```
+---
+
+<h2 align="center">Création d'une page web</h2>
+
+### ✨ Création d'un controller
+
+Pour en apprendre d'avantages sur les controllers rendez-vous sur cette page !
+```bash
+symfony console make:controller nomController
+```
