@@ -30,3 +30,37 @@ class HelloController extends AbstractController
 **Voici ce que ça donne sur une page**
 ![helloWorld](https://github.com/Kosal-DEV/Symfony/blob/main/symfony/Exemple-helloWorld.png?raw=true)
 
+### 🚦 Qu’est-ce qu’une route en Symfony ?
+
+Une route en Symfony fait le lien entre une URL et une méthode de contrôleur. Elle permet de dire :
+
+"Quand l’utilisateur va sur cette adresse, exécute ce code."
+
+#### *Exemple*
+```symfony
+use Symfony\Component\Routing\Annotation\Route;
+
+class HomeController extends AbstractController
+{
+    #[Route('/', name: 'home')]
+    public function index(): Response
+    {
+        return new Response('Bienvenue sur la page d’accueil !');
+    }
+}
+```
+- `#[Route('/', name: 'home')]`
+- `/` = URL (racine du site),
+- `name: 'home'` = nom de la route (utile pour les liens internes),
+- `index()` = méthode exécutée,
+- `Response(...)` = ce que la page va afficher.
+
+### 🔧 Ajouter des paramètres dans l’URL
+```symfony
+    #[Route('/article/{id}', name: 'article_show')]
+    public function show($id): Response
+    {
+        return new Response("Voici la page article n°$id");
+    }
+```
+- Si on appelle /article/12 → Symfony passe `12` à `$id`.
