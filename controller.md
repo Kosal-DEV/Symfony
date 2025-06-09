@@ -28,3 +28,4 @@ class HelloController extends AbstractController
 - Cette méthode retourne une réponse avec le texte **Hello World !**.
 
 **Voici ce que ça donne sur une page**
+![helloWorld](https://github.com/Kosal-DEV/Symfony/blob/main/symfony/Exemple-helloWorld.png?raw=true)
