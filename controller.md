@@ -27,7 +27,8 @@ class HelloController extends AbstractController
 - La route `/` appelle la méthode `index()` qui est exécutée au niveau de la page d'accueil.
 - Cette méthode retourne une réponse avec le texte **Hello World !**.
 
-**Voici ce que ça donne sur une page**
+**Voici ce que ça donne sur une page** ⬇️
+
 ![helloWorld](https://github.com/Kosal-DEV/Symfony/blob/main/symfony/Exemple-helloWorld.png?raw=true)
 
 ### 🚦 Qu’est-ce qu’une route en Symfony ?
@@ -64,3 +65,6 @@ class HomeController extends AbstractController
     }
 ```
 - Si on appelle /article/12 → Symfony passe `12` à `$id`.
+
+#### *Voici ce que ça donne sur une page* ⬇️
+![parametre](https://github.com/Kosal-DEV/Symfony/blob/main/symfony/Route-parametre.png?raw=true)
