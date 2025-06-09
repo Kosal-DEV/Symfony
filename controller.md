@@ -24,7 +24,7 @@ class HelloController extends AbstractController
     }
 }
 ```
-- La route `/` appelle la méthode `index()` qui est executer au niveau de la page d'acceuil.
+- La route `/` appelle la méthode `index()` qui est exécutée au niveau de la page d'accueil.
 - Cette méthode retourne une réponse avec le texte **Hello World !**.
 
 **Voici ce que ça donne sur une page**
