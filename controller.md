@@ -17,14 +17,14 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HelloController extends AbstractController
 {
-    #[Route('/hello', name: 'hello')]
+    #[Route('/', name: 'accueil')]
     public function index(): Response
     {
         return new Response('Hello World !');
     }
 }
 ```
-- La route `/hello` appelle la méthode `index()`.
+- La route `/` appelle la méthode `index()` qui est executer au niveau de la page d'acceuil.
 - Cette méthode retourne une réponse avec le texte **Hello World !**.
 
 **Voici ce que ça donne sur une page**
