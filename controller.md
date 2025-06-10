@@ -6,7 +6,7 @@ En Symfony, un controller (ou contrôleur) est une classe PHP qui contient des m
 Autrement dit, c’est le cœur de la logique métier d’une page web ou d'une fonctionnalité dans ton application. Il fait le lien entre l’utilisateur (via l’URL/la requête) et le système (base de données, affichage, etc.).
 
 *Exemple simple de controller :*
-```symfony
+```php
 // src/Controller/HelloController.php
 
 namespace App\Controller;
@@ -26,6 +26,7 @@ class HelloController extends AbstractController
 ```
 - La route `/` appelle la méthode `index()` qui est exécutée au niveau de la page d'accueil.
 - Cette méthode retourne une réponse avec le texte **Hello World !**.
+- `AbstractController` donne accès à des méthodes utiles comme `render()`, `redirectToRoute()`...
 
 **Voici ce que ça donne sur une page** ⬇️
 
@@ -38,7 +39,7 @@ Une route en Symfony fait le lien entre une URL et une méthode de contrôleur. 
 "Quand l’utilisateur va sur cette adresse, exécute ce code."
 
 #### *Exemple*
-```symfony
+```php
 use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
@@ -57,7 +58,7 @@ class HomeController extends AbstractController
 - `Response(...)` = ce que la page va afficher.
 
 ### 🔧 Ajouter des paramètres dans l’URL
-```symfony
+```php
     #[Route('/article/{id}', name: 'article_show')]
     public function show($id): Response
     {
@@ -68,3 +69,71 @@ class HomeController extends AbstractController
 
 #### *Voici ce que ça donne sur une page* ⬇️
 ![parametre](https://github.com/Kosal-DEV/Symfony/blob/main/symfony/Route-parametre.png?raw=true)
+
+### ✅Les contraintes :
+En Symfony, requirements permet de définir des contraintes (ou règles) sur les paramètres d’une route.
+```php
+#[Route('/article/{id}', name: 'article_show', requirements: ['id' => '\d+'])]
+public function show(int $id): Response {
+    return new Response("Article numéro $id");
+}
+```
+- `{id}` est un paramètre dynamique dans l’URL.
+
+requirements: `['id' => '\d+']` signifie :
+- le paramètre `id` doit être un ou plusieurs chiffres (`\d+`).
+- Si tu vas sur `/article/abc` → Symfony renvoie une erreur 404 car `abc` ne respecte pas la contrainte.
+
+### 🔗 C'est quoi un slug ?
+
+En Symfony (et en développement web en général), un slug est une version "propre" et lisible d’un texte, souvent utilisée dans une URL pour représenter un titre ou un nom.
+
+#### *Exemple*
+Le titre :
+`"10 Astuces pour Symfony !"`
+
+Le slug correspondant serait :
+`10-astuces-pour-symfony`
+
+### ✅ Pourquoi utiliser un slug ?
+
+✔️ Améliore le référencement (SEO)
+
+✔️ Rend l'URL plus lisible
+
+✔️ Permet d’identifier une ressource sans exposer son ID
+
+En symfony tu peux inclure un slug dans une route :
+```php
+#[Route('/article/{slug}', name: 'article_show')]
+public function show(string $slug): Response
+{
+    // Récupérer l’article via le slug, par exemple depuis la base de données
+}
+```
+Et dans l'URL tu aurais :
+`/article/10-astuces-pour-symfony`
+
+### 🖼️ La méthode render() en Symfony
+
+La méthode `render()` permet d’afficher une **vue Twig** à partir d’un contrôleur.
+
+#### 📌 Exemple :
+```php
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+
+class HomeController extends AbstractController
+{
+    #[Route('/accueil', name: 'home')]
+    public function index(): Response
+    {
+        return $this->render('home/index.html.twig', [
+            'message' => 'Bienvenue sur Symfony !',
+        ]);
+    }
+}
+```
+
+❗Pour en apprendre d'avantage sur le moteur de template twig [cliquez ici]()
