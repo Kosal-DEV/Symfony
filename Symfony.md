@@ -103,3 +103,10 @@ Cette commande permet de supprimer une base de donnée définitivement donc à u
 ```bash
 symfony console doctrine:database:drop --force
 ```
+
+### 📦 Créer une entité
+
+Attention une entité est représentée sous forme de classe PHP. Cette commande va nous permettre de créer une Classe avec les attributs qu’on voudra ainsi que les getters et setters de ces attributs.
+```bash
+symfony console make:entity 
+```
