@@ -92,7 +92,7 @@ symfony console make:controller nomController
 
 ### 💾 Créer une base de donnée
 
-Cette commande permet de créer une base de donnée, pour en apprendre d'avantage sur Doctrine ORM [(cliquez-ici)](https://github.com/Kosal-DEV/Symfony/blob/main/controller.md)
+Cette commande permet de créer une base de donnée, pour en apprendre d'avantage sur Doctrine ORM [(cliquez-ici)](https://github.com/Kosal-DEV/Symfony/blob/main/Doctrine_ORM.md)
 ```bash
 symfony console doctrine:database:create
 ```
