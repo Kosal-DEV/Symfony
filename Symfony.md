@@ -96,3 +96,10 @@ Cette commande permet de créer une base de donnée, pour en apprendre d'avantag
 ```bash
 symfony console doctrine:database:create
 ```
+
+### 🗑️ Supprimer une base de donnée
+
+Cette commande permet de supprimer une base de donnée définitivement donc à utiliser avec modération !
+```bash
+symfony console doctrine:database:drop --force
+```
