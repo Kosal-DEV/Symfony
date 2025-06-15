@@ -110,3 +110,17 @@ Attention une entité est représentée sous forme de classe PHP. Cette commande
 ```bash
 symfony console make:entity 
 ```
+
+### 📤 Migration de notre entité
+
+Cette commande génère un fichier SQL pour appliquer les changements faits aux entités dans la base de données.
+```bash
+symfony console make:migration
+```
+
+### 🗄️ Applique les changements à la base de données
+
+La commande exécute les fichiers de migration générés avec `make:migration`.
+```bash
+symfony console doctrine:migrations:migrate
+```
