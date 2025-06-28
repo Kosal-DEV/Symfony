@@ -85,7 +85,7 @@ symfony server:stop
 
 ### ✨ Création d'un controller
 
-Pour en apprendre d'avantages sur les controllers rendez-vous sur [cette page](https://github.com/Kosal-DEV/Symfony/blob/main/controller.md) !
+Pour en apprendre d'avantages sur les controllers rendez-vous sur [cette page](https://github.com/Kosal-DEV/Symfony/blob/main/2_Controller.md) !
 ```bash
 symfony console make:controller nomController
 ```
